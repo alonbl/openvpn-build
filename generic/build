@@ -290,6 +290,7 @@ build_opensc() {
 	./configure ${CONFIGOPTS} ${EXTRA_OPENSC_CONFIG} \
 		--enable-openssl \
 		--enable-zlib \
+		CPPFLAGS="${SCRIPTROOT}/include" \
 		OPENSSL_CFLAGS="${OPENSSL_CRYPTO_CFLAGS}" \
 		OPENSSL_LIBS="${OPENSSL_CRYPTO_LIBS}" \
 		|| die "Configure opensc"
